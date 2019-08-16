@@ -1,24 +1,21 @@
-package day2;
-
-import java.util.Random;
-import java.util.Scanner;
+package day3;
 
 public class ZuoYe06 {
     public static void main(String[] args) {
-        Random random = new Random();
-        int number = random.nextInt(100)+1;
-        Scanner sc = new Scanner(System.in);
-        while (true){
-            System.out.println("你才一个数：");
-            int i = sc.nextInt();
-            if (number>i){
-                System.out.println("小了");
-            }else if (number<i){
-                System.out.println("大了");
-            }else {
-                System.out.println("你猜对了");
-                System.exit(0);
+        int a = 1;
+        int[] arr={1,2,3,1,3,4,5};
+        fangfa(arr,a);
+    }
+    public static void fangfa(int[] brr,int key){
+        int count = 0;
+        for (int i = 0; i <brr.length ; i++) {
+            if (key==brr[i]){
+                System.out.println(i);
+                count++;
             }
+        }
+        if (count==0){
+            System.out.println("数组中没有这个数字");
         }
 
     }

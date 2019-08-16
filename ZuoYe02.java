@@ -1,13 +1,16 @@
-package day2;
+package day3;
+
+import java.util.Random;
 
 public class ZuoYe02 {
     public static void main(String[] args) {
-        int a=0;
-        for (int i = 0; i <=100 ; i++) {
-            if (i%3==0 && i%5==0){
-                a = a+i;
-            }
-        }
-        System.out.println(a);
+        Random random = new Random();
+        int a = random.nextInt(100)+1;
+        int b = random.nextInt(100)+1;
+        int c = fangfa(a,b);
+        System.out.println(c);
+    }
+    public static int fangfa(int a,int b){
+        return a+b;
     }
 }

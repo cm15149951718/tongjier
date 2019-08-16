@@ -1,19 +1,19 @@
-package day2;
+package day3;
 
 public class ZuoYe08 {
     public static void main(String[] args) {
-        int x=0;
-        for (int i = 1; i <100 ; i++) {
-            int a = i%10;
-            int b = i/10;
-            if (a!=9&&b!=9){
-                x = x+1;
-                System.out.print(i+" ");
-                if (x%5==0){
-                    System.out.println(" ");
-                }
-
+        int[] arr= {10,20,30,40,50,60};
+        fangfa(arr);
+    }
+    public static void fangfa(int[] arr){
+        int a = arr[0];
+        int b = 0;
+        for (int i = 0; i <arr.length ; i++) {
+            if (a<arr[i]){
+                a=arr[i];
+                b=i;
             }
         }
+        System.out.println(b);
     }
 }

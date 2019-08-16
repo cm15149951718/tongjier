@@ -1,22 +1,18 @@
-package day2;
-
-import java.util.Scanner;
+package day3;
 
 public class ZuoYe03 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入一个大于100的三位数：");
-        int i = scanner.nextInt();
-        int a =0;
-        for (int j = 100; j <=i; j++) {
-            int b = j%10; //个位
-            int c = j/10;
-            int d = c%10;//十位
-            int e = j/100;
-            if (b!=7&&d!=5&&e!=3){
-                a = a+j;
+        int[] arr={10,20,30,40,50,60};
+        int a = fangfa(arr);
+        System.out.println(a);
+    }
+    public static int fangfa(int arr[]){
+        int a = arr[0];
+        for (int i = 1; i <arr.length ; i++) {
+            if (a>arr[i]){
+                a = arr[i];
             }
         }
-        System.out.println(a);
+        return a;
     }
 }

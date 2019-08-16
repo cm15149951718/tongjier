@@ -1,13 +1,15 @@
-package day2;
+package day3;
 
 public class ZuoYe01 {
     public static void main(String[] args) {
-        int a = 0;
-        for (int i=1;i<=100;i++){
-            if (i%2==1){
-                a=a+i;
+        fangfa(15);
+
+    }
+    public static void fangfa(int a){
+        for (int i = 0; i <a+1 ; i++) {
+            if (i%2==0){
+                System.out.println(i);
             }
         }
-        System.out.println(a);
     }
 }

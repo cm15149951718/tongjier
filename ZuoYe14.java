@@ -1,20 +1,20 @@
-package day2;
-
-import java.util.Random;
+package day3;
 
 public class ZuoYe14 {
     public static void main(String[] args) {
-        Random random = new Random();
-        int[] arr_={1,2,3,4,5,6,7,8,9,10};
-        int[] arr=new int[3];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i]=arr_[random.nextInt(10)];
+        int[] arr = {1,2,2,2,3,3,4,4,4,4};
+        fangfa(arr);
+    }
+    public static void fangfa(int[] arr){
+        for (int i = 0; i < arr.length; i++) {// 0
+            int a = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    a++;
+                }
+            }
+            System.out.println(arr[i] + "在数组中出现了" + a + "次");
         }
-        int sum=0;
-        for (int i = 0; i < arr.length; i++) {
-            sum=sum+arr[i];
-        }
-        System.out.println("新数组所有元素的和为："+sum);
-
     }
 }
+

@@ -1,33 +1,13 @@
-package day2;
-
-import java.util.Scanner;
+package day3;
 
 public class ZuoYe16 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("请联系输入10次1到10的数：");
-        int[] arr=new int[10];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i]=sc.nextInt();
-        }
-        int sum_1=0;
-        int sum_2=0;
-        int sum_3=0;
-        int sum=0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i]==1){
-                sum_1++;
-            }else if (arr[i]==2){
-                sum_2++;
-            }else if (arr[i]==3){
-                sum_3++;
-            }else{
-                sum++;
-            }
-        }
-        System.out.println("数字1的个数："+sum_1);
-        System.out.println("数字2的个数："+sum_2);
-        System.out.println("数字3的个数："+sum_3);
-        System.out.println("非法数字的个数："+sum);
+        ZuoYe16A zuoYe16A = new ZuoYe16A();
+        zuoYe16A.setBianhao("123456");
+        zuoYe16A.setName("张三");
+        zuoYe16A.setNianling(18);
+        zuoYe16A.setShengao(179.23);
+        zuoYe16A.setXingbie("男");
+        System.out.println(zuoYe16A.getName()+"   编号为："+zuoYe16A.getBianhao()+"  年龄为："+zuoYe16A.getNianling()+"   性别为："+zuoYe16A.getXingbie()+"  身高为："+zuoYe16A.getShengao());
     }
 }
